@@ -1,50 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(to bottom right, #ffcccc, #ff99cc);
+    color: #fff;
     height: 100vh;
-    margin: 0;
-    background: linear-gradient(to bottom right, #ffcccb, #ffe4e1); /* Nuansa romantis */
-    overflow: hidden; /* Menyembunyikan scrollbar saat animasi */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
 
 .container {
     text-align: center;
-    position: relative; /* Agar anak elemen dapat diposisikan relatif terhadap container */
-    z-index: 10; /* Agar konten tetap di atas animasi hati */
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-    color: #ff6b81;
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 input {
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ff6b81;
+    width: 250px;
+    border: none;
     border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 1em;
 }
 
 button {
-    background-color: #ff6b81;
-    color: white;
+    background-color: #ff66b2;
     border: none;
-    padding: 12px 25px;
-    cursor: pointer;
-    margin: 5px;
     border-radius: 5px;
-    font-weight: bold; /* Font lebih tegas */
-    font-family: 'Courier New', Courier, monospace; /* Font yang lebih keren */
-    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
 }
 
 button:hover {
-    background-color: #ff4c6a;
+    background-color: #ff3385;
 }
 
 #output {
@@ -53,40 +61,24 @@ button:hover {
 
 .heart {
     position: absolute;
-    display: inline-block;
-    animation: heartbeat 0.5s infinite;
-    pointer-events: none; /* Agar hati tidak dapat diklik */
+    opacity: 1;
+    pointer-events: none;
+    animation: floating 5s linear infinite;
 }
 
-@keyframes heartbeat {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-}
-
-.love {
-    color: pink;
-    font-size: 20px;
-    animation: float 2s infinite; /* Animasi mengapung */
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+@keyframes floating {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100px); }
 }
 
 .instruction {
-    margin-top: 10px;
-    color: #ff6b81;
+    font-size: 1.2em;
+    color: #ff66b2;
+    margin-top: 15px;
     font-weight: bold;
+}
+
+/* Untuk tombol yang lebih menarik */
+#teaseBtn {
+    background-color: #ffccff;
 }
