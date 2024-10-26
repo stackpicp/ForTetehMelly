@@ -1,0 +1,92 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom right, #ffcccb, #ffe4e1); /* Nuansa romantis */
+    overflow: hidden; /* Menyembunyikan scrollbar saat animasi */
+}
+
+.container {
+    text-align: center;
+    position: relative; /* Agar anak elemen dapat diposisikan relatif terhadap container */
+    z-index: 10; /* Agar konten tetap di atas animasi hati */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+    color: #ff6b81;
+}
+
+input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ff6b81;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ff6b81;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold; /* Font lebih tegas */
+    font-family: 'Courier New', Courier, monospace; /* Font yang lebih keren */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff4c6a;
+}
+
+#output {
+    margin-top: 20px;
+}
+
+.heart {
+    position: absolute;
+    display: inline-block;
+    animation: heartbeat 0.5s infinite;
+    pointer-events: none; /* Agar hati tidak dapat diklik */
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.love {
+    color: pink;
+    font-size: 20px;
+    animation: float 2s infinite; /* Animasi mengapung */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.instruction {
+    margin-top: 10px;
+    color: #ff6b81;
+    font-weight: bold;
+}
