@@ -10,7 +10,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
 
     // Cek apakah input tidak kosong
     if (inputText.trim() === '') {
-        alert('Silakan masukkan teks sebelum mengirim!');
+        alert('Masukkin dulu teks nya baru kirim, sayang!');
         return; // Hentikan eksekusi jika input kosong
     }
 
@@ -23,7 +23,7 @@ document.getElementById('submitBtn').addEventListener('click', function() {
     // Clear the input field
     document.getElementById('inputText').value = '';
 
-    // Tampilkan tombol "Cinta Abadi"
+    // Tampilkan tombol "Coba pencet!"
     document.getElementById('funBtn').style.display = 'inline-block';
 
     // Hapus output setelah 1 detik
